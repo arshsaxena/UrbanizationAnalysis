@@ -1,0 +1,28 @@
+.
+├── README.md
+├── assets
+│   └── block_diagram.png
+├── code
+│   ├── README.md
+│   ├── combined_analysis.js
+│   ├── optical_analysis.js
+│   └── radar_analysis.js
+├── data
+│   ├── census
+│   │   ├── 2001.xls
+│   │   └── 2011.xlsx
+│   └── gee
+│       ├── radar_image2018.png
+│       ├── radar_image2024.png
+│       ├── radar_urban2018.png
+│       ├── radar_urban2024.png
+│       ├── urban_area2018.png
+│       └── urban_area2024.png
+├── docs
+│   ├── report-preliminary.docx
+│   ├── report.md
+│   ├── report.pdf
+│   └── report.tex
+└── folder_structure.txt
+
+7 directories, 19 files
