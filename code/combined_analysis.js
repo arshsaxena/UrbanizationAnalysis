@@ -1,6 +1,3 @@
-// =============================================================================
-// STUDY AREA DEFINITION
-// =============================================================================
 var studyArea = ee.Geometry.Rectangle([80.1, 12.8, 80.4, 13.2]);
 Map.centerObject(studyArea, 10);
 
@@ -8,9 +5,6 @@ print('=== COMPREHENSIVE URBAN ANALYSIS: CHENNAI 2018-2024 ===');
 print('Study Area: Chennai Metropolitan Area');
 print('Methods: Optical (NDBI) + Radar (SAR Backscatter)');
 
-// =============================================================================
-// OPTICAL ANALYSIS (SENTINEL-2 NDBI)
-// =============================================================================
 
 // Load Sentinel-2 data for both years
 var s2_2024 = ee.ImageCollection('COPERNICUS/S2_SR_HARMONIZED')
@@ -50,9 +44,6 @@ var opticalArea2018 = opticalUrban2018.multiply(ee.Image.pixelArea()).reduceRegi
     maxPixels: 1e13
 });
 
-// =============================================================================
-// RADAR ANALYSIS (SENTINEL-1 SAR)
-// =============================================================================
 
 // Load Sentinel-1 data for both years
 var s1_2024 = ee.ImageCollection('COPERNICUS/S1_GRD')
@@ -92,9 +83,6 @@ var radarArea2018 = radarUrban2018.multiply(ee.Image.pixelArea()).reduceRegion({
     maxPixels: 1e13
 });
 
-// =============================================================================
-// VISUALIZATION
-// =============================================================================
 
 // Add layers to map
 Map.addLayer(optical2024, { bands: ['B4', 'B3', 'B2'], min: 0, max: 3000 }, 'Optical 2024', false);
@@ -111,10 +99,6 @@ var radarExpansion = radarUrban2024.subtract(radarUrban2018).eq(1);
 
 Map.addLayer(opticalExpansion, { palette: ['white', 'orange'] }, 'Optical Expansion (2018-2024)', false);
 Map.addLayer(radarExpansion, { palette: ['white', 'yellow'] }, 'Radar Expansion (2018-2024)', false);
-
-// =============================================================================
-// RESULTS SUMMARY
-// =============================================================================
 
 print('');
 print('=== OPTICAL ANALYSIS RESULTS ===');
