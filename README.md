@@ -22,10 +22,10 @@
 
 **Chennai Metropolitan Area (1,200 km²)**
 
-| Method | Growth (2018-2024) | Annual Rate |
-| :--- | :--- | :--- |
-| **Optical (NDBI)** | `+7.43 km²` (4.7%) | 1.24 km²/year |
-| **Radar (SAR)** | `+88.15 km²` (14.9%) | 14.69 km²/year |
+| Method             | Growth (2018-2024)   | Annual Rate    |
+| :----------------- | :------------------- | :------------- |
+| **Optical (NDBI)** | `+7.43 km²` (4.7%)   | 1.24 km²/year  |
+| **Radar (SAR)**    | `+88.15 km²` (14.9%) | 14.69 km²/year |
 
 - **🛰️ Sensors**: Sentinel-1 SAR + Sentinel-2 Optical
 - **🎯 Resolution**: 10m spatial resolution
@@ -35,13 +35,13 @@
 
 ### 📊 Metric Breakdown
 
-| Metric | Optical (NDBI) | Radar (SAR) | Comparison |
-| :--- | :--- | :--- | :--- |
-| **2018 Baseline** | 158.96 km² | 592.43 km² | Radar covers 3.7x more |
-| **2024 Current** | 166.39 km² | 680.58 km² | Radar covers 4.1x more |
-| **Absolute Growth** | +7.43 km² | **+88.15 km²** | 11.9x difference |
-| **Relative Growth** | +4.7% | **+14.9%** | 3.2x difference |
-| **Annual Rate** | 1.24 km²/year | **14.69 km²/year** | 11.8x difference |
+| Metric              | Optical (NDBI) | Radar (SAR)        | Comparison             |
+| :------------------ | :------------- | :----------------- | :--------------------- |
+| **2018 Baseline**   | 158.96 km²     | 592.43 km²         | Radar covers 3.7x more |
+| **2024 Current**    | 166.39 km²     | 680.58 km²         | Radar covers 4.1x more |
+| **Absolute Growth** | +7.43 km²      | **+88.15 km²**     | 11.9x difference       |
+| **Relative Growth** | +4.7%          | **+14.9%**         | 3.2x difference        |
+| **Annual Rate**     | 1.24 km²/year  | **14.69 km²/year** | 11.8x difference       |
 
 ### 🔍 Sensor Characteristics
 
@@ -56,11 +56,13 @@ Our study employs a multi-sensor approach to overcome individual sensor limitati
 
 **1. Optical Analysis (NDBI)**
 Uses the Short-Wave Infrared (SWIR) and Near-Infrared (NIR) bands.
+
 - **Formula**: `NDBI = (SWIR - NIR) / (SWIR + NIR)`
 - **Threshold**: `NDBI > 0.1` classifies as Urban.
 
 **2. Radar Analysis (SAR)**
 Analyzes VV polarization backscatter intensity.
+
 - **Source**: C-band SAR (10m Resolution)
 - **Threshold**: `VV > -10 dB` classifies as Urban.
 

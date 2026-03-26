@@ -20,9 +20,7 @@
 │       └── urban_area2024.png
 ├── docs
 │   ├── report-preliminary.docx
-│   ├── report.md
-│   ├── report.pdf
-│   └── report.tex
+│   └── report.pdf
 └── folder_structure.txt
 
-7 directories, 19 files
+7 directories, 17 files
